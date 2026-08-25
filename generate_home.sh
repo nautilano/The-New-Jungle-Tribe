@@ -118,6 +118,25 @@ cat << 'HTML' > public/index.html
         }
         .resource-box h3 { color: #4ade80; margin-top: 0; font-size: 1.1rem; margin-bottom: 8px; }
         .resource-box p { font-size: 0.95rem; margin: 0; color: #d1d5db; }
+
+        /* Footer Socials */
+        .footer {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 60px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .social-link {
+            color: #4ade80;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.05rem;
+            transition: color 0.2s;
+        }
+        .social-link:hover { color: #6ee7b7; text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -193,7 +212,7 @@ cat << 'HTML' > public/index.html
     </div>
 
     <!-- Resources Section Below Videos -->
-    <div id="resources" class="lower-section" style="margin-bottom: 60px;">
+    <div id="resources" class="lower-section">
         <h2>Resources & Field Notes</h2>
         <p style="text-align: center;">Explore our curated guides, audio publications, and reference material on ethnobotany, integration, and Amazonian plant work.</p>
         <div class="resource-row">
@@ -206,6 +225,13 @@ cat << 'HTML' > public/index.html
                 <p>Ongoing observations regarding Amazonian flora, sustainable stewardship, and traditional practices.</p>
             </div>
         </div>
+    </div>
+
+    <!-- Social Links Footer -->
+    <div class="footer">
+        <a href="https://discord.gg/YOUR_INVITE" target="_blank" class="social-link">Discord</a>
+        <a href="https://youtube.com/@YOUR_CHANNEL" target="_blank" class="social-link">YouTube</a>
+        <a href="https://instagram.com/YOUR_HANDLE" target="_blank" class="social-link">Instagram</a>
     </div>
 
 </body>
