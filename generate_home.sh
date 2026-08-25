@@ -37,10 +37,10 @@ cat << 'HTML' > public/index.html
         }
         .btn:hover { background: rgba(255,255,255,0.1); color: #6ee7b7; }
 
-        /* Original 3 Cards Grid Style */
+        /* Cards Grid Style (Updated to fit 4 cards smoothly) */
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
             margin-bottom: 50px;
             text-align: left;
@@ -50,9 +50,14 @@ cat << 'HTML' > public/index.html
             border: 1px solid rgba(255,255,255,0.1);
             border-radius: 12px;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .info-card h3 { color: #4ade80; margin-top: 0; font-size: 1.2rem; margin-bottom: 8px; }
-        .info-card p { color: #d1d5db; font-size: 0.95rem; margin: 0; }
+        .info-card p { color: #d1d5db; font-size: 0.95rem; margin: 0 0 15px 0; }
+        .card-link { color: #4ade80; text-decoration: none; font-size: 0.95rem; font-weight: 500; align-self: flex-start; }
+        .card-link:hover { text-decoration: underline; }
 
         /* Video Section Styles - 3 Column Grid */
         .video-section { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 50px; margin-bottom: 50px; }
@@ -174,19 +179,32 @@ cat << 'HTML' > public/index.html
         <a href="/entries/" class="btn">New Entries</a>
     </div>
 
-    <!-- Original Three Cards Section -->
+    <!-- Four Cards Grid Section -->
     <div class="cards-grid">
         <div class="info-card">
-            <h3>El Brujito 420</h3>
-            <p>Observations, ethnobotany, and plant wisdom.</p>
+            <div>
+                <h3>El Brujito 420</h3>
+                <p>Observations, ethnobotany, and plant wisdom.</p>
+            </div>
         </div>
         <div class="info-card">
-            <h3>Casa Lothlorien</h3>
-            <p>Land updates, organic apothecary, and cacao practice.</p>
+            <div>
+                <h3>Casa Lothlorien</h3>
+                <p>Land updates, organic apothecary, and cacao practice.</p>
+            </div>
         </div>
         <div class="info-card">
-            <h3>Yugen Sanctuary</h3>
-            <p>Amazonian healing space and master plant medicine.</p>
+            <div>
+                <h3>Yugen Sanctuary</h3>
+                <p>Amazonian healing space and master plant medicine.</p>
+            </div>
+        </div>
+        <div class="info-card">
+            <div>
+                <h3>More Projects</h3>
+                <p>Applying the tribe's approach across different fields and initiatives.</p>
+            </div>
+            <a href="/projects/" class="card-link">Explore Projects →</a>
         </div>
     </div>
 
