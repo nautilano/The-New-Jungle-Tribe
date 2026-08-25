@@ -37,7 +37,7 @@ cat << 'HTML' > public/index.html
         }
         .btn:hover { background: rgba(255,255,255,0.1); color: #6ee7b7; }
 
-        /* Cards Grid Style (Updated to fit 4 cards smoothly) */
+        /* Cards Grid Style (4 cards layout) */
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -124,7 +124,7 @@ cat << 'HTML' > public/index.html
         .resource-box h3 { color: #4ade80; margin-top: 0; font-size: 1.1rem; margin-bottom: 8px; }
         .resource-box p { font-size: 0.95rem; margin: 0; color: #d1d5db; }
 
-        /* Custom Ayahuasca Blossom Motif */
+        /* Custom Ayahuasca Vine Cross-Section Footer Motif */
         .pachamama-footer-motif {
             margin: 50px auto 20px auto;
             max-width: 400px;
@@ -135,11 +135,10 @@ cat << 'HTML' > public/index.html
             text-align: center;
         }
         .pachamama-footer-motif svg {
-            width: 52px;
-            height: 52px;
-            fill: #4ade80;
-            margin-bottom: 6px;
-            opacity: 0.95;
+            width: 64px;
+            height: 64px;
+            margin-bottom: 8px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
         }
         .pachamama-footer-motif p {
             color: #d1d5db;
@@ -271,14 +270,24 @@ cat << 'HTML' > public/index.html
         </div>
     </div>
 
-    <!-- Authentic Ayahuasca Flower Motif Card -->
+    <!-- Ayahuasca Vine Cross-Section Motif Card -->
     <div class="pachamama-footer-motif">
-        <!-- Detailed multi-petaled Ayahuasca Flower / Star Blossom SVG -->
-        <svg viewBox="0 0 512 512">
-            <path d="M256 32C192 128 128 160 32 224C128 256 192 288 256 480C320 288 384 256 480 224C384 160 320 128 256 32Z" opacity="0.6"/>
-            <path d="M256 96C210 170 170 210 96 256C170 302 210 342 256 416C302 342 342 302 416 256C342 210 302 170 256 96Z"/>
-            <circle cx="256" cy="256" r="36" fill="#1a2e23"/>
-            <circle cx="256" cy="256" r="16"/>
+        <!-- Custom SVG matching the multi-lobed woody cross-section pattern -->
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer bark layer -->
+            <path d="M100,15 C135,12 165,30 180,60 C195,90 190,130 170,160 C150,190 110,195 80,185 C50,175 25,150 15,120 C5,90 20,50 50,30 C80,10 85,18 100,15 Z" fill="#b48a58" stroke="#d4a373" stroke-width="4"/>
+            <!-- Inner woody ring core -->
+            <path d="M100,30 C128,28 152,43 165,68 C178,93 174,124 158,148 C142,172 108,177 82,168 C56,159 36,137 28,110 C20,83 32,54 54,39 C76,24 85,32 100,30 Z" fill="#d4a373"/>
+            <!-- 6 Petal-like vascular rays resembling the cross-section structure -->
+            <path d="M100,100 Q120,65 140,75 Q160,85 135,115 Z" fill="#fefae0" opacity="0.9"/>
+            <path d="M100,100 Q140,95 150,120 Q160,145 130,145 Z" fill="#fefae0" opacity="0.9"/>
+            <path d="M100,100 Q130,135 110,155 Q90,175 75,145 Z" fill="#fefae0" opacity="0.9"/>
+            <path d="M100,100 Q80,155 60,140 Q40,125 70,110 Z" fill="#fefae0" opacity="0.9"/>
+            <path d="M100,100 Q55,115 45,90 Q35,65 65,70 Z" fill="#fefae0" opacity="0.9"/>
+            <path d="M100,100 Q70,65 90,45 Q110,25 115,70 Z" fill="#fefae0" opacity="0.9"/>
+            <!-- Center pith ring -->
+            <circle cx="100" cy="100" r="14" fill="#b48a58"/>
+            <circle cx="100" cy="100" r="6" fill="#432818"/>
         </svg>
         <p>Honoring Pachamama • The Amazon Basin</p>
     </div>
