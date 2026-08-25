@@ -2,7 +2,7 @@
 
 mkdir -p public/el-brujito
 
-# 1. Update Main Hub to link El Brujito 420 card
+# 1. Main Hub script remains intact
 cat << 'HTML' > public/index.html
 <!DOCTYPE html>
 <html lang="en">
@@ -215,12 +215,10 @@ cat << 'HTML' > public/index.html
         </div>
     </div>
 
-    <!-- Embedded Videos Section (The Ayahuasca Music Trilogy) -->
+    <!-- Embedded Videos Section -->
     <div class="video-section">
         <h2>The Ayahuasca Music Trilogy</h2>
         <div class="video-grid">
-            
-            <!-- Album I -->
             <div class="album-card">
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/I0Y52bgQNKI" title="Album I: The Calling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -230,8 +228,6 @@ cat << 'HTML' > public/index.html
                     <a href="https://youtu.be/I0Y52bgQNKI" target="_blank" class="listen-link">Listen on YouTube →</a>
                 </div>
             </div>
-
-            <!-- Album II -->
             <div class="album-card">
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/9y_reivRgT4" title="Album II: The Immersion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -241,8 +237,6 @@ cat << 'HTML' > public/index.html
                     <a href="https://youtu.be/9y_reivRgT4" target="_blank" class="listen-link">Listen on YouTube →</a>
                 </div>
             </div>
-
-            <!-- Album III -->
             <div class="album-card">
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/Accu3dPmQQ4" title="Album III: Integration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -252,17 +246,16 @@ cat << 'HTML' > public/index.html
                     <a href="https://youtu.be/Accu3dPmQQ4" target="_blank" class="listen-link">Listen on YouTube →</a>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <!-- About Section Below Videos -->
+    <!-- About Section -->
     <div id="about" class="lower-section">
         <h2>About The New Jungle Tribe</h2>
         <p>Rooted deep in the heart of the Amazon basin in Iquitos, Peru, The New Jungle Tribe serves as a digital and physical sanctuary bridging ancient ethnobotanical wisdom, master plant medicine, and global consciousness.</p>
     </div>
 
-    <!-- Resources Section Below Videos -->
+    <!-- Resources Section -->
     <div id="resources" class="lower-section">
         <h2>Resources & Field Notes</h2>
         <p style="text-align: center;">Explore our curated guides, audio publications, and reference material on ethnobotany, integration, and Amazonian plant work.</p>
@@ -278,7 +271,7 @@ cat << 'HTML' > public/index.html
         </div>
     </div>
 
-    <!-- Ayahuasca Vine Cross-Section Motif Card -->
+    <!-- Ayahuasca Vine Cross-Section Footer Motif -->
     <div class="pachamama-footer-motif">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path d="M100,15 C135,12 165,30 180,60 C195,90 190,130 170,160 C150,190 110,195 80,185 C50,175 25,150 15,120 C5,90 20,50 50,30 C80,10 85,18 100,15 Z" fill="#b48a58" stroke="#d4a373" stroke-width="4"/>
@@ -306,7 +299,7 @@ cat << 'HTML' > public/index.html
 </html>
 HTML
 
-# 2. Update El Brujito 420 page with Deep Autumn palette and "Coming Soon" notice
+# 2. Update El Brujito 420 page with palette references removed
 cat << 'HTML' > public/el-brujito/index.html
 <!DOCTYPE html>
 <html lang="en">
@@ -316,7 +309,7 @@ cat << 'HTML' > public/el-brujito/index.html
     <title>El Brujito 420 — Coming Soon</title>
     <style>
         body { 
-            background-color: #1f1713; /* Deep Autumn Espresso/Charcoal */
+            background-color: #1f1713; 
             color: #f4eee1; 
             font-family: sans-serif; 
             padding: 40px 20px; 
@@ -336,7 +329,7 @@ cat << 'HTML' > public/el-brujito/index.html
         .subtitle { color: #d1bfa7; font-size: 1.3rem; margin-bottom: 30px; }
         
         .coming-soon-box {
-            background-color: #2e221b; /* Rich Earthy Brown */
+            background-color: #2e221b; 
             border: 1px solid rgba(217, 119, 6, 0.2);
             border-radius: 16px;
             padding: 40px 30px;
@@ -402,7 +395,7 @@ cat << 'HTML' > public/el-brujito/index.html
         
         <div class="coming-soon-box">
             <h2>Coming Soon</h2>
-            <p>This dedicated personal space is currently being cultivated. Check back soon for field journals, ethnobotanical notes, and plant wisdom rendered in deep autumn tones.</p>
+            <p>This dedicated personal space is currently being cultivated. Check back soon for field journals, ethnobotanical notes, and plant wisdom.</p>
         </div>
 
         <a href="/" class="btn">← Back to Main Hub</a>
@@ -422,7 +415,7 @@ cat << 'HTML' > public/el-brujito/index.html
             <circle cx="100" cy="100" r="14" fill="#8d5b34"/>
             <circle cx="100" cy="100" r="6" fill="#2e221b"/>
         </svg>
-        <p>El Brujito 420 • Deep Autumn Edition</p>
+        <p>El Brujito 420 • Plant Wisdom</p>
     </div>
 </body>
 </html>
