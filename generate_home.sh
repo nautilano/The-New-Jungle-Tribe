@@ -5,8 +5,9 @@ mkdir -p public/more-projects
 mkdir -p public/entries
 mkdir -p public/philosophy
 mkdir -p public/casa-lothlorien
+mkdir -p public/yugen-sanctuary
 
-# 1. Update Main Hub to link Casa Lothlorien card
+# 1. Update Main Hub to link Yugen Sanctuary card
 cat << 'HTML' > public/index.html
 <!DOCTYPE html>
 <html lang="en">
@@ -205,12 +206,13 @@ cat << 'HTML' > public/index.html
             </div>
             <span class="card-link">Explore →</span>
         </a>
-        <div class="info-card" style="cursor: default;">
+        <a href="/yugen-sanctuary/" class="info-card">
             <div>
                 <h3>Yugen Sanctuary</h3>
                 <p>Amazonian healing space and master plant medicine.</p>
             </div>
-        </div>
+            <span class="card-link">Explore →</span>
+        </a>
         <a href="/more-projects/" class="info-card">
             <div>
                 <h3>More Projects</h3>
@@ -304,18 +306,18 @@ cat << 'HTML' > public/index.html
 </html>
 HTML
 
-# 2. Create Casa Lothlorien page (Rich Brown & Warm Gold / Beeswax & Essential Oils aesthetic)
-cat << 'HTML' > public/casa-lothlorien/index.html
+# 2. Create Yugen Sanctuary page (Peaceful Sage / Deep Forest Healing aesthetic)
+cat << 'HTML' > public/yugen-sanctuary/index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Lothlorien — The New Jungle Tribe</title>
+    <title>Yugen Sanctuary — The New Jungle Tribe</title>
     <style>
         body { 
-            background-color: #221811; /* Deep Warm Rich Brown (Beeswax block base) */
-            color: #e6d5c3; /* Soft Amber-Tinted Cream Text */
+            background-color: #13221b; /* Serene Deep Pine & Sage Base */
+            color: #d1fae5; /* Soft Mint-Tinted Off-White Text */
             font-family: sans-serif; 
             padding: 40px 20px; 
             max-width: 850px; 
@@ -333,31 +335,32 @@ cat << 'HTML' > public/casa-lothlorien/index.html
             box-sizing: border-box;
             text-align: left;
         }
-        h1 { color: #f3b95f; font-size: 3rem; margin-bottom: 10px; text-align: center; text-shadow: 0 2px 8px rgba(243, 185, 95, 0.2); }
-        .subtitle { color: #d4a373; font-size: 1.25rem; margin-bottom: 40px; text-align: center; }
+        h1 { color: #a7f3d0; font-size: 3rem; margin-bottom: 10px; text-align: center; text-shadow: 0 2px 10px rgba(167, 243, 208, 0.15); }
+        .subtitle { color: #6ee7b7; font-size: 1.25rem; margin-bottom: 40px; text-align: center; }
         
-        .apothecary-box {
-            background-color: #2c2018; /* Rich Chestnut Brown Card Surface */
-            border: 1px solid rgba(243, 185, 95, 0.2); /* Soft Gold Border */
+        .sanctuary-box {
+            background-color: #1b2e25; /* Grounded Forest Surface */
+            border: 1px solid rgba(167, 243, 208, 0.15); /* Soft Healing Mint Border */
             border-radius: 16px;
             padding: 35px 30px;
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
-        .apothecary-box h2 {
-            color: #f3b95f; /* Radiant Warm Gold Accent */
+        .sanctuary-box h2 {
+            color: #a7f3d0; /* Radiant Soft Mint Accent */
             font-size: 1.6rem;
             margin-top: 0;
             margin-bottom: 15px;
             letter-spacing: 0.5px;
         }
-        .apothecary-box p {
-            color: #d4a373;
+        .sanctuary-box p {
+            color: #d1fae5;
             font-size: 1.05rem;
             line-height: 1.7;
             margin: 0 0 15px 0;
+            opacity: 0.9;
         }
-        .apothecary-box p:last-child {
+        .sanctuary-box p:last-child {
             margin-bottom: 0;
         }
 
@@ -367,24 +370,24 @@ cat << 'HTML' > public/casa-lothlorien/index.html
         }
 
         .btn { 
-            background: rgba(243, 185, 95, 0.1); 
-            color: #f3b95f; 
+            background: rgba(167, 243, 208, 0.08); 
+            color: #a7f3d0; 
             padding: 12px 24px; 
             border-radius: 8px; 
-            border: 1px solid rgba(243, 185, 95, 0.3); 
+            border: 1px solid rgba(167, 243, 208, 0.25); 
             text-decoration: none; 
             font-size: 1.05rem; 
             font-weight: bold;
             transition: background 0.2s, color 0.2s;
             display: inline-block;
         }
-        .btn:hover { background: rgba(243, 185, 95, 0.2); color: #ffe6ac; }
+        .btn:hover { background: rgba(167, 243, 208, 0.15); color: #ecfdf5; }
 
         .pachamama-footer-motif {
             margin: 40px auto 20px auto;
             max-width: 380px;
-            background-color: #2c2018;
-            border: 1px solid rgba(243, 185, 95, 0.2);
+            background-color: #1b2e25;
+            border: 1px solid rgba(167, 243, 208, 0.15);
             border-radius: 12px;
             padding: 20px;
             text-align: center;
@@ -396,7 +399,7 @@ cat << 'HTML' > public/casa-lothlorien/index.html
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
         }
         .pachamama-footer-motif p {
-            color: #d4a373;
+            color: #6ee7b7;
             font-size: 0.85rem;
             margin: 0;
             letter-spacing: 1px;
@@ -406,22 +409,22 @@ cat << 'HTML' > public/casa-lothlorien/index.html
 </head>
 <body>
     <div class="content-wrap">
-        <h1>Casa Lothlorien</h1>
-        <p class="subtitle">The Golden Apothecary, Land Updates & Cacao Practice</p>
+        <h1>Yugen Sanctuary</h1>
+        <p class="subtitle">Deep Peace, Amazonian Healing & Master Plant Communion</p>
         
-        <div class="apothecary-box">
-            <h2>I. The Alchemy of Beeswax & Honey</h2>
-            <p>Steeped in the warm, golden hues of unrefined beeswax and raw hive elixirs, Casa Lothlorien honors the sacred architecture of the bee. Our practices weave natural wax and slow-rendered balms to create pure shields of light and grounding resonance.</p>
+        <div class="sanctuary-box">
+            <h2>I. The Space of Profound Quiet</h2>
+            <p>Named after the Japanese concept of profound, mysterious grace felt in the presence of nature, Yugen Sanctuary offers a protected cocoon of deep stillness. Here, the noise of the modern world dissolves into the breathing rhythm of the jungle.</p>
         </div>
 
-        <div class="apothecary-box">
-            <h2>II. Essential Oils & Botanical Essences</h2>
-            <p>Distilled from the breathing canopy of the forest, our essential oil and aromatic extractions capture the living spirit of Amazonian flora. Every drop carries deep medicinal frequency, designed to harmonize somatic energy and elevate sacred spaces.</p>
+        <div class="sanctuary-box">
+            <h2>II. Master Plant Medicine & Dietas</h2>
+            <p>Engaged in traditional Amazonian healing lineages, the sanctuary holds sacred space for deep master plant work. Through quiet isolation, careful preparation, and profound respect, seekers realign their energetic anatomy with ancient plant teachers.</p>
         </div>
 
-        <div class="apothecary-box">
-            <h2>III. Land Practice & Ceremonial Cacao</h2>
-            <p>Rooted in physical stewardship of the land and heart-centered cacao ceremonies, Casa Lothlorien serves as a living container where earth wisdom, botanical cultivation, and community union flow as one continuous stream.</p>
+        <div class="sanctuary-box">
+            <h2>III. Integration & Inner Restoration</h2>
+            <p>True healing extends beyond the ceremony. Yugen Sanctuary nurtures a gentle environment for somatic integration, emotional release, and lasting spiritual restoration—allowing peace to anchor firmly within the physical vessel.</p>
         </div>
 
         <div class="nav-center">
@@ -431,18 +434,18 @@ cat << 'HTML' > public/casa-lothlorien/index.html
 
     <div class="pachamama-footer-motif">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100,15 C135,12 165,30 180,60 C195,90 190,130 170,160 C150,190 110,195 80,185 C50,175 25,150 15,120 C5,90 20,50 50,30 C80,10 85,18 100,15 Z" fill="#d4a373" stroke="#f3b95f" stroke-width="4"/>
-            <path d="M100,30 C128,28 152,43 165,68 C178,93 174,124 158,148 C142,172 108,177 82,168 C56,159 36,137 28,110 C20,83 32,54 54,39 C76,24 85,32 100,30 Z" fill="#b48a58"/>
-            <path d="M100,100 Q120,65 140,75 Q160,85 135,115 Z" fill="#221811" opacity="0.9"/>
-            <path d="M100,100 Q140,95 150,120 Q160,145 130,145 Z" fill="#221811" opacity="0.9"/>
-            <path d="M100,100 Q130,135 110,155 Q90,175 75,145 Z" fill="#221811" opacity="0.9"/>
-            <path d="M100,100 Q80,155 60,140 Q40,125 70,110 Z" fill="#221811" opacity="0.9"/>
-            <path d="M100,100 Q55,115 45,90 Q35,65 65,70 Z" fill="#221811" opacity="0.9"/>
-            <path d="M100,100 Q70,65 90,45 Q110,25 115,70 Z" fill="#221811" opacity="0.9"/>
-            <circle cx="100" cy="100" r="14" fill="#f3b95f"/>
-            <circle cx="100" cy="100" r="6" fill="#221811"/>
+            <path d="M100,15 C135,12 165,30 180,60 C195,90 190,130 170,160 C150,190 110,195 80,185 C50,175 25,150 15,120 C5,90 20,50 50,30 C80,10 85,18 100,15 Z" fill="#6ee7b7" stroke="#a7f3d0" stroke-width="4"/>
+            <path d="M100,30 C128,28 152,43 165,68 C178,93 174,124 158,148 C142,172 108,177 82,168 C56,159 36,137 28,110 C20,83 32,54 54,39 C76,24 85,32 100,30 Z" fill="#34d399"/>
+            <path d="M100,100 Q120,65 140,75 Q160,85 135,115 Z" fill="#13221b" opacity="0.9"/>
+            <path d="M100,100 Q140,95 150,120 Q160,145 130,145 Z" fill="#13221b" opacity="0.9"/>
+            <path d="M100,100 Q130,135 110,155 Q90,175 75,145 Z" fill="#13221b" opacity="0.9"/>
+            <path d="M100,100 Q80,155 60,140 Q40,125 70,110 Z" fill="#13221b" opacity="0.9"/>
+            <path d="M100,100 Q55,115 45,90 Q35,65 65,70 Z" fill="#13221b" opacity="0.9"/>
+            <path d="M100,100 Q70,65 90,45 Q110,25 115,70 Z" fill="#13221b" opacity="0.9"/>
+            <circle cx="100" cy="100" r="14" fill="#a7f3d0"/>
+            <circle cx="100" cy="100" r="6" fill="#13221b"/>
         </svg>
-        <p>Apothecary & Beeswax Alchemy</p>
+        <p>Peace & Master Plant Healing</p>
     </div>
 </body>
 </html>
