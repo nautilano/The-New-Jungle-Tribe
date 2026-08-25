@@ -1,0 +1,15 @@
+baseURL = 'https://thenewjungletribe.pages.dev/'
+languageCode = 'en-us'
+title = 'The New Jungle Tribe'
+
+[params]
+  defaultTheme = "dark"
+  
+  [params.profileMode]
+    enabled = true
+    title = "THE NEW JUNGLE TRIBE"
+    subtitle = "Wisdom, Ethnobotany & Global Consciousness"
+    
+    [[params.profileMode.buttons]]
+      name = "Psychedelic Revelations"
+      url = "/posts/"
