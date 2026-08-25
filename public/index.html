@@ -48,11 +48,17 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            text-decoration: none;
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+        .info-card:hover {
+            background-color: #2a4536;
+            border-color: rgba(74, 222, 128, 0.4);
         }
         .info-card h3 { color: #4ade80; margin-top: 0; font-size: 1.2rem; margin-bottom: 8px; }
         .info-card p { color: #d1d5db; font-size: 0.95rem; margin: 0 0 15px 0; }
         .card-link { color: #4ade80; text-decoration: none; font-size: 0.95rem; font-weight: 500; align-self: flex-start; }
-        .card-link:hover { text-decoration: underline; }
+        .info-card:hover .card-link { text-decoration: underline; }
 
         /* Video Section Styles - 3 Column Grid */
         .video-section { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 50px; margin-bottom: 50px; }
@@ -175,30 +181,31 @@
 
     <!-- Four Cards Grid Section -->
     <div class="cards-grid">
-        <div class="info-card">
+        <a href="/el-brujito/" class="info-card">
             <div>
                 <h3>El Brujito 420</h3>
                 <p>Observations, ethnobotany, and plant wisdom.</p>
             </div>
-        </div>
-        <div class="info-card">
+            <span class="card-link">Explore →</span>
+        </a>
+        <div class="info-card" style="cursor: default;">
             <div>
                 <h3>Casa Lothlorien</h3>
                 <p>Land updates, organic apothecary, and cacao practice.</p>
             </div>
         </div>
-        <div class="info-card">
+        <div class="info-card" style="cursor: default;">
             <div>
                 <h3>Yugen Sanctuary</h3>
                 <p>Amazonian healing space and master plant medicine.</p>
             </div>
         </div>
-        <div class="info-card">
+        <div class="info-card" style="cursor: default;">
             <div>
                 <h3>More Projects</h3>
                 <p>Applying the tribe's approach across different fields and initiatives.</p>
             </div>
-            <a href="/projects/" class="card-link">Explore →</a>
+            <span class="card-link">Explore →</span>
         </div>
     </div>
 
@@ -267,27 +274,22 @@
 
     <!-- Ayahuasca Vine Cross-Section Motif Card -->
     <div class="pachamama-footer-motif">
-        <!-- Custom SVG matching the multi-lobed woody cross-section pattern -->
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <!-- Outer bark layer -->
             <path d="M100,15 C135,12 165,30 180,60 C195,90 190,130 170,160 C150,190 110,195 80,185 C50,175 25,150 15,120 C5,90 20,50 50,30 C80,10 85,18 100,15 Z" fill="#b48a58" stroke="#d4a373" stroke-width="4"/>
-            <!-- Inner woody ring core -->
             <path d="M100,30 C128,28 152,43 165,68 C178,93 174,124 158,148 C142,172 108,177 82,168 C56,159 36,137 28,110 C20,83 32,54 54,39 C76,24 85,32 100,30 Z" fill="#d4a373"/>
-            <!-- 6 Petal-like vascular rays resembling the cross-section structure -->
             <path d="M100,100 Q120,65 140,75 Q160,85 135,115 Z" fill="#fefae0" opacity="0.9"/>
             <path d="M100,100 Q140,95 150,120 Q160,145 130,145 Z" fill="#fefae0" opacity="0.9"/>
             <path d="M100,100 Q130,135 110,155 Q90,175 75,145 Z" fill="#fefae0" opacity="0.9"/>
             <path d="M100,100 Q80,155 60,140 Q40,125 70,110 Z" fill="#fefae0" opacity="0.9"/>
             <path d="M100,100 Q55,115 45,90 Q35,65 65,70 Z" fill="#fefae0" opacity="0.9"/>
             <path d="M100,100 Q70,65 90,45 Q110,25 115,70 Z" fill="#fefae0" opacity="0.9"/>
-            <!-- Center pith ring -->
             <circle cx="100" cy="100" r="14" fill="#b48a58"/>
             <circle cx="100" cy="100" r="6" fill="#432818"/>
         </svg>
         <p>Honoring Pachamama • The Amazon Basin</p>
     </div>
 
-    <!-- Social Links Footer -->
+    <!-- Footer Socials -->
     <div class="footer">
         <a href="https://discord.gg/YOUR_INVITE" target="_blank" class="social-link">Discord</a>
         <a href="https://youtube.com/@YOUR_CHANNEL" target="_blank" class="social-link">YouTube</a>
