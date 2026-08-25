@@ -204,7 +204,7 @@ cat << 'HTML' > public/index.html
                 <h3>More Projects</h3>
                 <p>Applying the tribe's approach across different fields and initiatives.</p>
             </div>
-            <a href="/projects/" class="card-link">Explore Projects →</a>
+            <a href="/projects/" class="card-link">Explore →</a>
         </div>
     </div>
 
