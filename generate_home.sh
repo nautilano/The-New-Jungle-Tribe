@@ -22,7 +22,7 @@ cat << 'HTML' > public/index.html
         h1 { color: #4ade80; font-size: 2.8rem; margin-bottom: 10px; }
         .subtitle { color: #d1d5db; font-size: 1.2rem; margin-bottom: 30px; }
         
-        .menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 700px; margin: 0 auto 40px auto; }
+        .menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 800px; margin: 0 auto 40px auto; }
         
         .btn { 
             background: rgba(255,255,255,0.05); 
@@ -171,6 +171,7 @@ cat << 'HTML' > public/index.html
     <div class="menu">
         <a href="/posts/" class="btn">Psychedelic Revelations</a>
         <a href="/philosophy/" class="btn">The Tribe's Philosophy</a>
+        <a href="/entries/" class="btn">New entries</a>
     </div>
 
     <!-- Original Three Cards Section -->
