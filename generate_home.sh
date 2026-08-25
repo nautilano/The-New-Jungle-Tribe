@@ -3,8 +3,9 @@
 mkdir -p public/el-brujito
 mkdir -p public/more-projects
 mkdir -p public/entries
+mkdir -p public/philosophy
 
-# 1. Update Main Hub to link New Entries card/button
+# 1. Update Main Hub to link Philosophy card/button if desired, or keep menu
 cat << 'HTML' > public/index.html
 <!DOCTYPE html>
 <html lang="en">
@@ -301,7 +302,7 @@ cat << 'HTML' > public/index.html
 </html>
 HTML
 
-# 2. Create More Projects page with Warm Beige / Desert Sand palette
+# 2. Create More Projects page (Warm Beige / Desert Sand)
 cat << 'HTML' > public/more-projects/index.html
 <!DOCTYPE html>
 <html lang="en">
@@ -421,7 +422,7 @@ cat << 'HTML' > public/more-projects/index.html
 </html>
 HTML
 
-# 3. Create New Entries page with clean Off-White / Paper blog palette & updated subtitle
+# 3. Create New Entries page (Clean Off-White / Paper)
 cat << 'HTML' > public/entries/index.html
 <!DOCTYPE html>
 <html lang="en">
@@ -431,8 +432,8 @@ cat << 'HTML' > public/entries/index.html
     <title>New Entries — The New Jungle Tribe</title>
     <style>
         body { 
-            background-color: #fbf9f5; /* Crisp Paper Off-White Base */
-            color: #1f2937; /* Dark Slate Text for High Readability */
+            background-color: #fbf9f5; 
+            color: #1f2937; 
             font-family: sans-serif; 
             padding: 40px 20px; 
             max-width: 800px; 
@@ -573,6 +574,150 @@ cat << 'HTML' > public/entries/index.html
             <circle cx="100" cy="100" r="6" fill="#fbf9f5"/>
         </svg>
         <p>Journal & Field Notes</p>
+    </div>
+</body>
+</html>
+HTML
+
+# 4. Create Philosophy page with Immersive Dark / Deep Core palette
+cat << 'HTML' > public/philosophy/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tribe's Philosophy — The New Jungle Tribe</title>
+    <style>
+        body { 
+            background-color: #0b1118; /* Immersive Deep Slate / Obsidian Dark Base */
+            color: #d1d5db; /* Muted Light Gray/Silver Text */
+            font-family: sans-serif; 
+            padding: 40px 20px; 
+            max-width: 850px; 
+            margin: auto; 
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 90vh;
+            justify-content: space-between;
+        }
+        .content-wrap {
+            margin: auto;
+            padding: 40px 20px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: left;
+        }
+        h1 { color: #f3f4f6; font-size: 3rem; margin-bottom: 10px; text-align: center; }
+        .subtitle { color: #9ca3af; font-size: 1.25rem; margin-bottom: 40px; text-align: center; }
+        
+        .manifesto-box {
+            background-color: #151c24; /* Dark Card Surface */
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 35px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .manifesto-box h2 {
+            color: #34d399; /* Deep Jungle Emerald / Amber Accent */
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+        .manifesto-box p {
+            color: #9ca3af;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin: 0 0 15px 0;
+        }
+        .manifesto-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .nav-center {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn { 
+            background: rgba(52, 211, 153, 0.08); 
+            color: #34d399; 
+            padding: 12px 24px; 
+            border-radius: 8px; 
+            border: 1px solid rgba(52, 211, 153, 0.25); 
+            text-decoration: none; 
+            font-size: 1.05rem; 
+            font-weight: bold;
+            transition: background 0.2s, color 0.2s;
+            display: inline-block;
+        }
+        .btn:hover { background: rgba(52, 211, 153, 0.15); color: #6ee7b7; }
+
+        .pachamama-footer-motif {
+            margin: 40px auto 20px auto;
+            max-width: 380px;
+            background-color: #151c24;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .pachamama-footer-motif svg {
+            width: 52px;
+            height: 52px;
+            margin-bottom: 8px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+        }
+        .pachamama-footer-motif p {
+            color: #9ca3af;
+            font-size: 0.85rem;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrap">
+        <h1>The Tribe's Philosophy</h1>
+        <p class="subtitle">Core values, foundational principles, and the internal map</p>
+        
+        <div class="manifesto-box">
+            <h2>I. The Internal Pressure & Sovereignty</h2>
+            <p>We recognize that true clarity requires maintaining an unbroken container. By honoring physical discipline, internal restraint, and deep somatic grounding, we protect the inner pressure tank necessary for sustainable creation and focus.</p>
+        </div>
+
+        <div class="manifesto-box">
+            <h2>II. Ethnobotanical Stewardship</h2>
+            <p>Our path is intertwined with the intelligence of the Amazon. We approach master plant medicines and the surrounding environment not as commodities, but as ancient teachers demanding absolute reciprocity, respect, and stewardship.</p>
+        </div>
+
+        <div class="manifesto-box">
+            <h2>III. Circular Harmony</h2>
+            <p>Rejecting linear extraction, we build systems that mirror natural ecosystems—where waste feeds new growth, minimal footprints preserve wild spaces, and technology serves consciousness rather than fragmenting it.</p>
+        </div>
+
+        <div class="nav-center">
+            <a href="/" class="btn">← Back to Main Hub</a>
+        </div>
+    </div>
+
+    <div class="pachamama-footer-motif">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100,15 C135,12 165,30 180,60 C195,90 190,130 170,160 C150,190 110,195 80,185 C50,175 25,150 15,120 C5,90 20,50 50,30 C80,10 85,18 100,15 Z" fill="#34d399" stroke="#059669" stroke-width="4"/>
+            <path d="M100,30 C128,28 152,43 165,68 C178,93 174,124 158,148 C142,172 108,177 82,168 C56,159 36,137 28,110 C20,83 32,54 54,39 C76,24 85,32 100,30 Z" fill="#059669"/>
+            <path d="M100,100 Q120,65 140,75 Q160,85 135,115 Z" fill="#0b1118" opacity="0.9"/>
+            <path d="M100,100 Q140,95 150,120 Q160,145 130,145 Z" fill="#0b1118" opacity="0.9"/>
+            <path d="M100,100 Q130,135 110,155 Q90,175 75,145 Z" fill="#0b1118" opacity="0.9"/>
+            <path d="M100,100 Q80,155 60,140 Q40,125 70,110 Z" fill="#0b1118" opacity="0.9"/>
+            <path d="M100,100 Q55,115 45,90 Q35,65 65,70 Z" fill="#0b1118" opacity="0.9"/>
+            <path d="M100,100 Q70,65 90,45 Q110,25 115,70 Z" fill="#0b1118" opacity="0.9"/>
+            <circle cx="100" cy="100" r="14" fill="#34d399"/>
+            <circle cx="100" cy="100" r="6" fill="#0b1118"/>
+        </svg>
+        <p>Core Values & Principles</p>
     </div>
 </body>
 </html>
