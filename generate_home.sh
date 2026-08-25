@@ -3,7 +3,7 @@
 mkdir -p public/el-brujito
 mkdir -p public/more-projects
 
-# 1. Main Hub remains unchanged (links to /more-projects/)
+# 1. Main Hub (unchanged, links to /more-projects/)
 cat << 'HTML' > public/index.html
 <!DOCTYPE html>
 <html lang="en">
@@ -300,7 +300,7 @@ cat << 'HTML' > public/index.html
 </html>
 HTML
 
-# 2. Create More Projects page with Deep Cenote & Teal palette
+# 2. Create More Projects page with Warm Beige / Desert Sand palette
 cat << 'HTML' > public/more-projects/index.html
 <!DOCTYPE html>
 <html lang="en">
@@ -310,8 +310,8 @@ cat << 'HTML' > public/more-projects/index.html
     <title>More Projects — The New Jungle Tribe</title>
     <style>
         body { 
-            background-color: #17242b; /* Deep Cenote & Teal Base */
-            color: #e2e8f0; 
+            background-color: #f4f1ea; /* Warm Desert Sand / Beige Base */
+            color: #2c241d; /* Deep Espresso Text */
             font-family: sans-serif; 
             padding: 40px 20px; 
             max-width: 900px; 
@@ -326,50 +326,50 @@ cat << 'HTML' > public/more-projects/index.html
             margin: auto;
             padding: 40px 20px;
         }
-        h1 { color: #38bdf8; font-size: 3rem; margin-bottom: 10px; } /* Bright Teal/Sky Accent */
-        .subtitle { color: #94a3b8; font-size: 1.3rem; margin-bottom: 30px; }
+        h1 { color: #b45309; font-size: 3rem; margin-bottom: 10px; } /* Rich Amber/Terracotta Accent */
+        .subtitle { color: #78716c; font-size: 1.3rem; margin-bottom: 30px; }
         
         .coming-soon-box {
-            background-color: #1e3a4c; /* Deep Turquoise/Blue Card */
-            border: 1px solid rgba(56, 189, 248, 0.25);
+            background-color: #e7e2d5; /* Soft Stone/Sand Card */
+            border: 1px solid rgba(180, 83, 9, 0.2);
             border-radius: 16px;
             padding: 40px 30px;
             margin-bottom: 40px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
         }
         .coming-soon-box h2 {
-            color: #38bdf8;
+            color: #b45309;
             font-size: 2rem;
             margin-top: 0;
             margin-bottom: 15px;
         }
         .coming-soon-box p {
-            color: #cbd5e1;
+            color: #44403c;
             font-size: 1.1rem;
             line-height: 1.6;
             margin: 0;
         }
 
         .btn { 
-            background: rgba(56, 189, 248, 0.1); 
-            color: #38bdf8; 
+            background: rgba(180, 83, 9, 0.08); 
+            color: #b45309; 
             padding: 12px 24px; 
             border-radius: 8px; 
-            border: 1px solid rgba(56, 189, 248, 0.3); 
+            border: 1px solid rgba(180, 83, 9, 0.25); 
             text-decoration: none; 
             font-size: 1.1rem; 
             font-weight: bold;
             transition: background 0.2s, color 0.2s;
             display: inline-block;
         }
-        .btn:hover { background: rgba(56, 189, 248, 0.2); color: #7dd3fc; }
+        .btn:hover { background: rgba(180, 83, 9, 0.15); color: #92400e; }
 
-        /* Custom Vine Cross-Section Footer Motif adapted to Teal Theme */
+        /* Custom Vine Cross-Section Footer Motif adapted to Beige Theme */
         .pachamama-footer-motif {
             margin: 40px auto 20px auto;
             max-width: 380px;
-            background-color: #1e3a4c;
-            border: 1px solid rgba(56, 189, 248, 0.2);
+            background-color: #e7e2d5;
+            border: 1px solid rgba(180, 83, 9, 0.15);
             border-radius: 12px;
             padding: 20px;
             text-align: center;
@@ -378,10 +378,10 @@ cat << 'HTML' > public/more-projects/index.html
             width: 56px;
             height: 56px;
             margin-bottom: 8px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
         }
         .pachamama-footer-motif p {
-            color: #cbd5e1;
+            color: #57534e;
             font-size: 0.85rem;
             margin: 0;
             letter-spacing: 1px;
@@ -405,16 +405,16 @@ cat << 'HTML' > public/more-projects/index.html
     <!-- Vine Cross-Section Motif Card -->
     <div class="pachamama-footer-motif">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100,15 C135,12 165,30 180,60 C195,90 190,130 170,160 C150,190 110,195 80,185 C50,175 25,150 15,120 C5,90 20,50 50,30 C80,10 85,18 100,15 Z" fill="#0369a1" stroke="#38bdf8" stroke-width="4"/>
-            <path d="M100,30 C128,28 152,43 165,68 C178,93 174,124 158,148 C142,172 108,177 82,168 C56,159 36,137 28,110 C20,83 32,54 54,39 C76,24 85,32 100,30 Z" fill="#38bdf8"/>
-            <path d="M100,100 Q120,65 140,75 Q160,85 135,115 Z" fill="#fefae0" opacity="0.9"/>
-            <path d="M100,100 Q140,95 150,120 Q160,145 130,145 Z" fill="#fefae0" opacity="0.9"/>
-            <path d="M100,100 Q130,135 110,155 Q90,175 75,145 Z" fill="#fefae0" opacity="0.9"/>
-            <path d="M100,100 Q80,155 60,140 Q40,125 70,110 Z" fill="#fefae0" opacity="0.9"/>
-            <path d="M100,100 Q55,115 45,90 Q35,65 65,70 Z" fill="#fefae0" opacity="0.9"/>
-            <path d="M100,100 Q70,65 90,45 Q110,25 115,70 Z" fill="#fefae0" opacity="0.9"/>
-            <circle cx="100" cy="100" r="14" fill="#0369a1"/>
-            <circle cx="100" cy="100" r="6" fill="#17242b"/>
+            <path d="M100,15 C135,12 165,30 180,60 C195,90 190,130 170,160 C150,190 110,195 80,185 C50,175 25,150 15,120 C5,90 20,50 50,30 C80,10 85,18 100,15 Z" fill="#d97706" stroke="#b45309" stroke-width="4"/>
+            <path d="M100,30 C128,28 152,43 165,68 C178,93 174,124 158,148 C142,172 108,177 82,168 C56,159 36,137 28,110 C20,83 32,54 54,39 C76,24 85,32 100,30 Z" fill="#b48a58"/>
+            <path d="M100,100 Q120,65 140,75 Q160,85 135,115 Z" fill="#f4f1ea" opacity="0.9"/>
+            <path d="M100,100 Q140,95 150,120 Q160,145 130,145 Z" fill="#f4f1ea" opacity="0.9"/>
+            <path d="M100,100 Q130,135 110,155 Q90,175 75,145 Z" fill="#f4f1ea" opacity="0.9"/>
+            <path d="M100,100 Q80,155 60,140 Q40,125 70,110 Z" fill="#f4f1ea" opacity="0.9"/>
+            <path d="M100,100 Q55,115 45,90 Q35,65 65,70 Z" fill="#f4f1ea" opacity="0.9"/>
+            <path d="M100,100 Q70,65 90,45 Q110,25 115,70 Z" fill="#f4f1ea" opacity="0.9"/>
+            <circle cx="100" cy="100" r="14" fill="#d97706"/>
+            <circle cx="100" cy="100" r="6" fill="#f4f1ea"/>
         </svg>
         <p>Initiatives & Collaborations</p>
     </div>
