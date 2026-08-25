@@ -119,7 +119,7 @@ cat << 'HTML' > public/index.html
         .resource-box h3 { color: #4ade80; margin-top: 0; font-size: 1.1rem; margin-bottom: 8px; }
         .resource-box p { font-size: 0.95rem; margin: 0; color: #d1d5db; }
 
-        /* Pachamama Footprint Motif */
+        /* Pachamama / Ayahuasca Flower Motif */
         .pachamama-footer-motif {
             margin: 50px auto 20px auto;
             max-width: 400px;
@@ -130,11 +130,11 @@ cat << 'HTML' > public/index.html
             text-align: center;
         }
         .pachamama-footer-motif svg {
-            width: 40px;
-            height: 40px;
+            width: 46px;
+            height: 46px;
             fill: #4ade80;
             margin-bottom: 8px;
-            opacity: 0.85;
+            opacity: 0.9;
         }
         .pachamama-footer-motif p {
             color: #d1d5db;
@@ -252,11 +252,11 @@ cat << 'HTML' > public/index.html
         </div>
     </div>
 
-    <!-- Pachamama Footprint Motif -->
+    <!-- Pachamama / Ayahuasca Flower Motif -->
     <div class="pachamama-footer-motif">
-        <!-- Minimal Leaf/Earth Symbol SVG -->
+        <!-- Symmetric Ayahuasca Flower / Star Blossom SVG Motif -->
         <svg viewBox="0 0 24 24">
-            <path d="M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2M12,4C15.87,4 19,7.13 19,11C15,11 13,9 12,6C11,9 9,11 5,11C5,7.13 8.13,4 12,4M5,13C8.5,13 10.5,14.5 12,17C13.5,14.5 15.5,13 19,13C19,16.87 15.87,20 12,20C8.13,20 5,16.87 5,13Z"/>
+            <path d="M12,2C12,2 14,7 16,9C18,11 22,12 22,12C22,12 18,13 16,15C14,17 12,22 12,22C12,22 10,17 8,15C6,13 2,12 2,12C2,12 6,11 8,9C10,7 12,2 12,2M12,6C11.2,8.2 9.8,9.6 7.6,10.4C9.8,11.2 11.2,12.6 12,14.8C12.8,12.6 14.2,11.2 16.4,10.4C14.2,9.6 12.8,8.2 12,6Z"/>
         </svg>
         <p>Honoring Pachamama • The Amazon Basin</p>
     </div>
