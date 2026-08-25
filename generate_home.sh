@@ -421,7 +421,7 @@ cat << 'HTML' > public/more-projects/index.html
 </html>
 HTML
 
-# 3. Create New Entries page with clean Off-White / Paper blog palette
+# 3. Create New Entries page with clean Off-White / Paper blog palette & updated subtitle
 cat << 'HTML' > public/entries/index.html
 <!DOCTYPE html>
 <html lang="en">
@@ -539,7 +539,7 @@ cat << 'HTML' > public/entries/index.html
 <body>
     <div class="content-wrap">
         <h1>New Entries</h1>
-        <p class="subtitle">Field notes, updates, and journal logs from the sanctuary</p>
+        <p class="subtitle">Field notes, updates, ideas and journal logs from members of the tribe</p>
         
         <div class="blog-feed">
             <div class="post-card">
